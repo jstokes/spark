@@ -15,3 +15,9 @@ RUN conda install -y \
     scikit-learn \
     bokeh \
     pandas
+
+RUN curl https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar \
+  -o /opt/spark/lib/aws-java-sdk-1.7.4.jar
+
+RUN curl http://central.maven.org/maven2/org/apache/hadoop/hadoop-aws/2.7.1/hadoop-aws-2.7.1.jar \
+  -o /opt/spark/lib/hadoop-aws-2.7.1.jar
