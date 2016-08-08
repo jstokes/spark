@@ -18,6 +18,8 @@ RUN conda install -y \
     bokeh \
     pandas
 
+RUN mkdir -p /opt/spark/lib
+
 RUN curl https://repo1.maven.org/maven2/com/amazonaws/aws-java-sdk/1.7.4/aws-java-sdk-1.7.4.jar \
   -o /opt/spark/lib/aws-java-sdk-1.7.4.jar
 
